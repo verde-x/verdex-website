@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="株式会社ヴェルデックスへのお問い合わせ" />
+    <title>お問い合わせ | 株式会社ヴェルデックス</title>
+    <link rel="icon" type="image/png" href="images/fabicon.png" />
+    <link rel="stylesheet" href="css/style.css?v=2" />
+  </head>
+  <body>
+    <!-- ヘッダー -->
+    <header>
+      <nav>
+        <a href="index.html" class="logo">
+          <img src="images/verdex-1.png" alt="VERDEX" />
+        </a>
+        <ul id="nav-menu">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="index.html#services">事業内容</a></li>
+          <li><a href="index.html#philosophy">企業理念</a></li>
+          <li><a href="index.html#company">会社概要</a></li>
+          <li><a href="contact.html" class="contact-btn">お問い合わせ</a></li>
+        </ul>
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ページヘッダー -->
+    <section class="page-header">
+      <h1>お問い合わせ</h1>
+      <p>Contact Us</p>
+    </section>
+
+    <!-- コンタクトフォーム -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-intro">
+          <h2>お気軽にご相談ください</h2>
+          <p>
+            プロジェクトに関するご相談、お見積もり、その他ご質問など<br />どんなことでもお気軽にお問い合わせください。
+          </p>
+        </div>
+
+        <!-- 送信結果メッセージ -->
+        <div id="form-status" class="form-status" style="display: none"></div>
+
+        <form
+          class="contact-form"
+          id="contactForm"
+          action="https://formspree.io/f/xzzjkwjz"
+          method="POST"
+        >
+          <div class="form-group">
+            <label>会社名・組織名<span class="required">*</span></label>
+            <input type="text" name="company" required />
+          </div>
+
+          <div class="form-group">
+            <label>お名前<span class="required">*</span></label>
+            <input type="text" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label>メールアドレス<span class="required">*</span></label>
+            <input type="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label>電話番号</label>
+            <input type="tel" name="phone" />
+          </div>
+
+          <div class="form-group">
+            <label>お問い合わせ種別<span class="required">*</span></label>
+            <select name="type" required>
+              <option value="">選択してください</option>
+              <option value="Webサイト制作">Webサイト制作のご依頼</option>
+              <option value="Webアプリケーション開発">Webアプリケーション開発のご依頼</option>
+              <option value="モバイルアプリ開発">モバイルアプリ開発のご依頼</option>
+              <option value="ITコンサルティング">ITコンサルティングのご相談</option>
+              <option value="その他">その他のお問い合わせ</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>お問い合わせ内容<span class="required">*</span></label>
+            <textarea name="message" required></textarea>
+            <p class="form-note">できるだけ詳しくご記入ください</p>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submit-btn">
+            送信する
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="images/verdex-2.png" alt="VERDEX" class="footer-logo" />
+          <p>
+            株式会社ヴェルデックス<br />
+            〒141-0001<br />
+            東京都品川区北品川5-5-15<br />
+            大崎ブライトコア4F SHIP
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>会社情報</h4>
+          <ul>
+            <li><a href="index.html#about">会社概要</a></li>
+            <li><a href="index.html#philosophy">企業理念</a></li>
+            <li><a href="index.html#services">事業内容</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>サービス</h4>
+          <ul>
+            <li><a href="index.html#services">Webサイト制作</a></li>
+            <li><a href="index.html#services">Webアプリケーション開発</a></li>
+            <li><a href="index.html#services">モバイルアプリ開発</a></li>
+            <li><a href="index.html#services">ITコンサルティング</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>その他</h4>
+          <ul>
+            <li><a href="privacy.html">プライバシーポリシー</a></li>
+            <li><a href="tokushoho.html">特定商取引法</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Verdex Inc. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>

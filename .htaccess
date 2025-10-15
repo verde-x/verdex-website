@@ -1,0 +1,18 @@
+# デフォルトページの設定
+DirectoryIndex index.html index.htm
+
+# セキュリティ設定（オプション）
+Options -Indexes
+
+#SITEGUARD_PLUGIN_SETTINGS_START
+#==== SITEGUARD_RENAME_LOGIN_SETTINGS_START
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteBase /
+    RewriteRule ^wp-signup\.php 404-siteguard [L]
+    RewriteRule ^wp-activate\.php 404-siteguard [L]
+    RewriteRule ^login_68953(.*)$ wp-login.php$1 [L]
+</IfModule>
+#==== SITEGUARD_RENAME_LOGIN_SETTINGS_END
+#SITEGUARD_PLUGIN_SETTINGS_END
+
