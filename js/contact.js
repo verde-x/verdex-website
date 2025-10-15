@@ -2,6 +2,20 @@
 const form = document.getElementById("contactForm");
 const formStatus = document.getElementById("form-status");
 const submitBtn = document.getElementById("submit-btn");
+const typeSelect = document.querySelector('select[name="type"]');
+const subjectField = document.getElementById("email-subject");
+
+// お問い合わせ種別が変更されたら件名を更新
+if (typeSelect && subjectField) {
+  typeSelect.addEventListener("change", function () {
+    const selectedType = typeSelect.value;
+    if (selectedType) {
+      subjectField.value = `【Verdex】お問い合わせ - ${selectedType}`;
+    } else {
+      subjectField.value = "【Verdex】お問い合わせ";
+    }
+  });
+}
 
 if (form) {
   form.addEventListener("submit", async function (e) {
@@ -45,9 +59,7 @@ if (form) {
       } else {
         // サーバーエラー
         const data = await response.json();
-        throw new Error(
-          data.error || "送信中にエラーが発生しました。"
-        );
+        throw new Error(data.error || "送信中にエラーが発生しました。");
       }
     } catch (error) {
       // エラー処理
